@@ -7,7 +7,9 @@ public class AddBus : MonoBehaviour {
     MoveOnPath odong;
     public GameObject OriOdong;
     public GameObject ParOdong;
+    public GameObject SpawnerLocation;
     GameObject CloneOdong;
+    public int wayPoint = 0;
 
     GameObject SetClone;
     int point;
@@ -17,9 +19,10 @@ public class AddBus : MonoBehaviour {
     {
         nomor += 1;
         CloneOdong = Instantiate(OriOdong, transform.position, transform.rotation) as GameObject;
-        CloneOdong.transform.parent = transform;
-        CloneOdong.transform.localScale = new Vector3(0.1989334f, 0.1989334f, 0.1989334f);
-        CloneOdong.name = "ipa_" + nomor.ToString();
+        CloneOdong.transform.parent = ParOdong.transform;
+        CloneOdong.transform.position = new Vector3(29.86314f, 1.4603f, 0);
+        CloneOdong.transform.localScale = new Vector3(1, 1, 1);
+        CloneOdong.name = "bus_" + nomor.ToString();
 
         //SetClone = GameObject.Find("ipa_" + nomor.ToString());
         //SetClone.GetComponent < currentWayPointID > = 0;

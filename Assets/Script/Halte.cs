@@ -73,13 +73,8 @@ public class Halte : MonoBehaviour {
         if (other.transform.tag == "odong"){
             turun = Random.Range(0, OdongIPA.penumpang);
             berhenti = true;
-            //print("berhenti");
-            OdongIPA.speed = 0;
+            this.OdongIPA.speed = 0;
             SadEmoji.SetActive(false);
-            //OdongIPA.penumpang = OdongIPA.penumpang - 5;
-            //cek kapasitas per halte
-            //penunggu = penunggu - (20 - OdongIPA.penumpang);
-            //OdongIPA.sisaKursi = 20 - OdongIPA.penumpang;      //sisa kursi = kapasitas - isi
 
             if (OdongIPA.penumpang != 0)
             {
